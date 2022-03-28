@@ -1,0 +1,241 @@
+/* GENERAL */
+:root {
+  --primary-color: #004643;
+  --primary-light-color: #37726e;
+  --primary-dark-color: #001f1c;
+  --secondary-color: #f9bc60;
+  --secondary-light-color: #ffee90;
+  --secondary-dark-color: #c38c31;
+  --gradient: linear-gradient(135deg, #37726e 0%, #e16162 67%, #f9bc60 100%);
+  --pattern: linear-gradient(
+      45deg,
+      #004643 10%,
+      transparent 11%,
+      transparent 89%,
+      #004643 90%
+    ),
+    linear-gradient(
+      135deg,
+      #004643 10%,
+      transparent 11%,
+      transparent 89%,
+      #004643 90%
+    ),
+    radial-gradient(circle, transparent 25%, #001f1c 26%),
+    linear-gradient(
+      45deg,
+      transparent 46%,
+      #004643 47%,
+      #004643 52%,
+      transparent 53%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 46%,
+      #004643 47%,
+      #004643 52%,
+      transparent 53%
+    );
+
+  --tertiary-color: #e16162;
+  --off-white: #fffffe;
+  --font-color: var(--off-white);
+}
+* :focus {
+  box-shadow: 0 0 0 0.2rem var(--secondary-light-color) !important	;
+}
+
+body {
+  background-color: white;
+}
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  color: var(--off-white);
+  font-size: 2rem;
+}
+
+h2 {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  color: var(--primary-dark-color);
+  font-size: 1.5rem;
+}
+
+hr {
+  border-top: 0.2rem solid var(--primary-dark-color);
+}
+
+.btn-outline-primary {
+  border-color: var(--font-color);
+  color: var(--font-color);
+}
+
+.btn-outline-primary:hover {
+  background: var(--gradient);
+  border-color: var(--off-white);
+  color: var(--off-white);
+}
+
+.btn-outline-primary:active {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.btn-outline-primary:disabled {
+  background-color: var(--primary-light-color);
+  opacity: 0.5;
+  border-color: var(--font-color);
+  color: white;
+}
+
+.btn-outline-secondary {
+  border-color: var(--secondary-dark-color);
+  color: var(--secondary-dark-color);
+}
+
+.btn-outline-secondary:hover {
+  border-color: var(--secondary-color);
+  color: var(--off-white);
+  background-color: var(--secondary-color);
+}
+
+/* NAV */
+nav {
+  background-color: var(--primary-dark-color);
+}
+.navbar {
+  padding: 1rem;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* TRACKER */
+.tracker-section {
+  padding: 1rem;
+}
+.tracker-card-holder {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.tracker-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: var(--primary-color);
+}
+
+.tracker-card {
+  /* box-shadow: 1px 0px 2px 5px #46464638; */
+  box-shadow: 0 0 7px var(--primary-color);
+  border: none;
+  background-color: var(--primary-light-color);
+  color: var(--font-color);
+}
+
+.combatant-name {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  color: var(--font-color);
+}
+
+.initiative-badge {
+  background-color: var(--secondary-dark-color);
+  margin: 0.5em;
+}
+
+.combatantDefeated {
+  opacity: 50%;
+}
+
+.HPBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  column-gap: 1em;
+}
+
+.HPBox .btn {
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.health-icon {
+  fill: var(--off-white);
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-right: 0.3rem;
+  margin-top: -0.1rem;
+}
+
+.action-button-group > .btn {
+  flex-grow: 1;
+}
+
+.action-icon {
+  fill: var(--font-color);
+  background-color: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.3em;
+}
+
+.btn-outline-primary:hover .action-icon {
+  fill: var(--secondary-light-color);
+}
+
+.progress {
+  flex-grow: 1;
+  background-color: var(--off-white);
+  align-self: center;
+}
+
+.progress-bar {
+  background-color: var(--secondary-light-color);
+}
+
+/* OFFCANVAS GENERAL */
+.offcanvas-header {
+  font-family: "Merriweather", serif;
+  color: var(--off-white);
+  background-color: var(--secondary-dark-color);
+}
+
+/* LIBRARY */
+#library {
+  background-color: var(--off-white);
+}
+#library .offcanvas-header {
+  background-color: var(--secondary-dark-color);
+}
+/* CHEAT SHEET */
+#cheatSheet {
+  background-color: var(--off-white);
+}
+
+#cheatSheet code {
+  border: 1px solid var(--secondary-dark-color);
+  color: var(--primary-dark-color);
+  padding: 0.1rem;
+  border-radius: 2px;
+}
+
+#cheatSheet .list-group {
+  background-color: var(--secondary-dark-color);
+}
+
+#cheatSheet .list-group-item p {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.call-out {
+  padding: 1rem;
+  background-color: var(--primary-light-color);
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  color: var(--off-white);
+  text-align: center;
+}
